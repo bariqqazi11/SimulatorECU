@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.bariqqazi.simulatorecu.VehicleSelectionController"
+      spacing="14" alignment="TOP_LEFT">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Vehicle Selection" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <Label text="Manufacturer"/>
+    <ComboBox fx:id="manufacturerCombo" onAction="#onManufacturerChanged" prefWidth="280"/>
+
+    <Label text="Make"/>
+    <ComboBox fx:id="makeCombo" onAction="#onMakeChanged" prefWidth="280"/>
+
+    <Label text="Model"/>
+    <ComboBox fx:id="modelCombo" onAction="#onModelChanged" prefWidth="280"/>
+
+    <Label fx:id="selectedCarLabel" text="Selected Car: -" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+    <Label fx:id="statusLabel" text=""/>
+
+    <HBox spacing="10">
+        <Button text="Back" onAction="#onBackClick"/>
+        <Button text="Next" onAction="#onNextClick"/>
+    </HBox>
+</VBox>
